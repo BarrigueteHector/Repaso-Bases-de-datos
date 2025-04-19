@@ -36,12 +36,16 @@ Para insertar registros en una tabla se usa la instrucción ``INSERT INTO``, ind
 
 Una instrucción ``INSERT`` tiene la siguiente estructura:
 
-``INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato', 'a', 12, '2025-04-18')``
+```
+INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato', 'a', 12, '2025-04-18')
+```
 
 Se puede omitr un campo siempre y cuando tambien se omita de la lista de valores, por ejemplo si quisieramos omitir ``campoUno``:
 > Se puede omitir un campo siempre y cuando se haya indicado en la tabla que no es obligatorio, esto se explicará en los siguientes apuntes
 
-``INSERT INTO TablaEjemplo (campoDos, campoTres, campoCuatro) VALUES ('b', 15, '2025-05-19')``
+```
+INSERT INTO TablaEjemplo (campoDos, campoTres, campoCuatro) VALUES ('b', 15, '2025-05-19')
+```
 
 El campo que no recibió ningun valor aparecerá como ``NULL``.
 
