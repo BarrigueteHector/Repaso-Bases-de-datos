@@ -67,7 +67,9 @@ Siguiendo con el ejemplo:
 
 Si querremos ver ``CampoUno`` y ``CampoDos`` la instrucción debe ser:
 
-``SELECT CampoUno, CampoDos FROM TablaEjemplo;``
+```
+SELECT CampoUno, CampoDos FROM TablaEjemplo;
+```
 
 Obteniendo como resultado:
 
