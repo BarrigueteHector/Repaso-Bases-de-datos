@@ -47,10 +47,12 @@ El campo que no recibió ningun valor aparecerá como ``NULL``.
 
 Para explicar la parte de **Consultas** de mejor manera agregaremos más registros, los cuales serán los siguientes:
 
-``INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato3', 'c', 99, '2025-02-18')``
-``INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato4', 'd', 1, '2025-03-18')``
-``INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato5', 'e', 10, '2025-04-18')``
-``INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato6', 21, '2025-01-18')``
+```
+INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato3', 'c', 99, '2025-02-18')
+INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato4', 'd', 1, '2025-03-18')
+INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato5', 'e', 10, '2025-04-18')
+INSERT INTO TablaEjemplo (campoUno, campoDos, campoTres, campoCuatro) VALUES ('dato6', 21, '2025-01-18')
+```
 
 
 ## CONSULTAS
@@ -65,9 +67,7 @@ Siguiendo con el ejemplo:
 
 Si querremos ver ``CampoUno`` y ``CampoDos`` la instrucción debe ser:
 
-```
-SELECT CampoUno, CampoDos FROM TablaEjemplo;
-```
+``SELECT CampoUno, CampoDos FROM TablaEjemplo;``
 
 Obteniendo como resultado:
 
