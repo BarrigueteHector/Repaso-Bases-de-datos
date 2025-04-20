@@ -6,7 +6,7 @@ Para crear una tabla se utiliza la instrucción ``CREATE TABLE Nombre``, sustitu
 
 ```
 CREATE TABLE NombreTabla(
-  nombreColumna tipoDato -- Siempre separados por una si hay más de una columna
+  nombreColumna tipoDato -- Debe agregarse una coma al final de la linea si hay más de una columna
 );
 ```
 
@@ -22,7 +22,7 @@ A continuación un ejemplo de como se construye una tabla:
 
 ```
 CREATE TABLE TablaEjemplo(
-  columnaUno varchar(5) -- Solo almacenará strings de 5 o menos caracteres
+  columnaUno varchar(5), -- Solo almacenará strings de 5 o menos caracteres
   columnaDos char,
   columnaTres int,
   columnaCuatro Date
