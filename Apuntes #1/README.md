@@ -207,7 +207,7 @@ UPDATE NombreTabla SET columna = NuevoDato
 WHERE condición;
 ```
 
-Al igual que en las consultas, se le puede agregar un ```WHERE``, pero primero hay que entender como funciona esta instrucción:
+Al igual que en las consultas, se le puede agregar un ``WHERE``, pero primero hay que entender como funciona esta instrucción:
 
 - Si no agregamos el ``WHERE`` entonces actualizará todos los registros
 - Si agregamos el ``WHERE`` solo actualizará aquellos registros que cumplan con la condición
