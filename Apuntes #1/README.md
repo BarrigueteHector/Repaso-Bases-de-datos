@@ -43,16 +43,18 @@ Para insertar registros en una tabla se usa la instrucción ``INSERT``, indicand
 Una instrucción ``INSERT`` tiene la siguiente estructura:
 
 ```
---          NombreTabla  (            columnasDeLaTabla             )        (      datosParaIngresar      )
+--          NombreTabla  (            columnasDeLaTabla             )                (      datosParaIngresar      )
 INSERT INTO TablaEjemplo (columnaUno, columnaDos, columnaTres, columnaCuatro) VALUES ('dato', 'a', 12, '2025-04-18');
 ```
 
-Se puede omitr una columna siempre y cuando tambien se omita de los datos para ingresar, por ejemplo si quisieramos omitir ``columnaUno``:
+Se puede omitr agregar algún valor a una columna, por ejemplo si quisieramos omitir ``columnaUno``:
 > Se puede omitir un columna si cuando se creó la tabla se indicó que dicho columna no es obligatorio, esto se explicará en los siguientes apuntes
 
 ```
 INSERT INTO TablaEjemplo (columnaDos, columnaTres, columnaCuatro) VALUES ('a', 15, '2025-05-19');
 ```
+
+Como se puede observar, simplemente no se incluye el nombre de la columna en la lista de columnas ni se proporciona un valor correspondiente en la lista de datos.
 
 Cuando hagamos una consulta, el dato de la columna aparecerá como ``NULL`` debido a que no tiene un valor asignado cuando se hizo el ``INSERT``.
 
