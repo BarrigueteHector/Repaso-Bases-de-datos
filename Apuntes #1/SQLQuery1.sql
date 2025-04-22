@@ -1,7 +1,7 @@
 -- ********** CREATE TABLE **********
 -- Crear una tabla con el nombre 'Prueba'
 CREATE TABLE Prueba(
-	-- Nombre de la columna, tipo y tama�o (opcinal)
+	-- Nombre de la columna, tipo y tamaño (opcinal)
 	nombre varchar(5), -- limitado a 5 caracteres
 	apellido varchar(10), -- limitado a 10 caracteres
 	edad int,
@@ -15,7 +15,7 @@ CREATE TABLE Prueba(
 SELECT * FROM Prueba;
 
 -- ********** INSERT **********
--- Inserci�n de registros a la tabla
+-- Inserción de registros a la tabla
 INSERT INTO Prueba (nombre, apellido, edad, estatura, genero, fecha) VALUES ('Alex', 'Ramirez', 19, 1.60, 'F', '2025-04-18');
 
 -- Nombre esta limitado a 5 caracteres, no se agregara, se tienen que quitar los caracteres extra
@@ -106,6 +106,34 @@ UPDATE Prueba SET genero = 'F';
 -- Ahora todos los registros tienen una 'F' en genero
 SELECT genero FROM Prueba;
 
+-- ********** ALTER TABLE **********
+-- Se puede agregar/eliminar una columna a la tabla
+ALTER TABLE Prueba ADD NuevaColumna varchar(100);
+
+-- Ahora aparecerá una nueva columna. Todos los registros que se han agregado hasta este momento no tendrán un valor para dicha columna
+SELECT * FROM Prueba;
+
+ALTER TABLE Prueba DROP COLUMN NuevaColumna;
+
+-- Ahora la columna que fue agregada ya no aparecerá.
+SELECT * FROM Prueba;
+
+-- También se puede cambiar el nombre de una columna, por ser SQL Server se usa la siguiente notacion
+EXEC sp_rename 'Prueba.fecha', 'registro', 'COLUMN';
+
+-- Ahora el nombre de la columna pasó de 'fecha' a 'registro'
+SELECT * FROM Prueba;
+
+-- Por último, para modificar el tipo de dato de una columna:
+-- Antes de hacer algun cambio, el siguiente comando (en SQL Server) nos ayuda a ver las caracteristicas de una tabla, lo que nos importa es ver el tipo de cada columna
+EXEC sp_help 'Prueba';
+
+-- Vamos a cambiar el tipo de 'registro' de 'date' a 'varchar'
+ALTER TABLE Prueba ALTER COLUMN registro varchar(8);
+
+-- Vemos que ahora registro cambió de tipo
+EXEC sp_help 'Prueba';
+
 -- ********** DELETE **********
 -- Para eliminar registros, al igual que con UPDATE, se utiliza WHERE para eliminar registros en especifico, si no se usa se eliminaran todos los registros
 -- Se eliminaran los registros que en el campo edad tengan un valor menor a 18
@@ -124,3 +152,8 @@ SELECT * FROM Prueba;
 -- ********** DROP TABLE **********
 -- Eliminar la tabla
 DROP TABLE Prueba;
+
+-- ********** COMMIT **********
+-- Por último, es importante mencionar que si cerramos la terminal/aplicación que estemos usando para sql, perderemos todo lo que hayamos hecho, para guardar todo el trabajo y tener que volver a crear tablar, ingresar registros y demas, utilizamos:
+
+COMMIT;
