@@ -1,5 +1,71 @@
 # Explicación del código
 
+## Herramientas utilizadas
+
+SQL Server 
+
+## Instrucciones para la tabla
+
+### Crear tabla
+
+```
+CREATE TABLE nombreTabla(
+  nombreColumna tipoDato -- Debe agregarse una coma al final de la linea si hay más de una columna
+);
+```
+
+### Eliminar tabla
+
+```
+DROP TABLE nombreTabla;
+```
+
+### Actualizar tabla (agregar una columna)
+```
+ALTER TABLE nombreTabla ADD nuevaColumna tipoDato;
+```
+
+
+### Actualizar tabla (eliminar una columna)
+
+```
+ALTER TABLE nombreTabla DROP COLUMN nombreColumna;
+```
+
+### Actualizar tabla (cambiar nombre a una columna)
+
+```
+EXEC sp_rename 'nombreTabla.nombreColumna', 'nuevoNombre', 'COLUMN';
+```
+
+### Actualizar tabla (cambiar tipo de dato a una columna)
+
+```
+ALTER TABLE nombreTabla ALTER COLUMN nombreColumna nuevoTipo;
+```
+
+### Caracteristicas de la tabla (muestra información de la tabla, nombres de las columnas, su tipo, tamaño, etc)
+
+```
+EXEC sp_help 'Prueba';
+```
+
+### Insertar datos a la tabla
+
+
+### Consultar el contenido de una tabla
+
+
+### Actualizar algún registro
+
+
+### Eliminar registros
+
+
+## Código de ejemplo
+
+[Ejemplo](https://github.com/BarrigueteHector/Repaso-Bases-de-datos/blob/main/Apuntes%20%231/SQLQuery1.sql)
+
 ## CREAR UNA TABLA
 
 Para crear una tabla se utiliza la instrucción ``CREATE TABLE Nombre``, sustituyendo **Nombre** por el nombre que tendrá la tabla, seguido de todas las columnas que van a componer a la tabla. 
