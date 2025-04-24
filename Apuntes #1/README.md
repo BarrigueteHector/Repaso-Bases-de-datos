@@ -109,3 +109,10 @@ DELETE FROM nombreTabla
 WHERE condicion;
 ```
 > La condición puede ser que una columna tenga un valor en especifico o esté en un rango de valores para eliminar el registro
+
+## Instrucciones de Control de Transacciones
+
+Permite guardar todas las acciones realizadas sobre una base de datos (DDL y DML)
+```
+COMMIT;
+```
